@@ -2199,8 +2199,7 @@ class Controller
                 }
 
                 if (isset($meta['title']) and $meta['title'] != '') {
-                    $meta['content_meta_title'] = strip_tags($meta['title']);
-
+                    $meta['content_meta_title'] = html_entity_decode(strip_tags($meta['title']), ENT_NOQUOTES|ENT_HTML5, "UTF-8");
                 }
 
 
